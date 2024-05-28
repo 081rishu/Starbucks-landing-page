@@ -1,0 +1,457 @@
+.root{
+    --font-small : 8px;
+    --font-medium : 12px;
+    --font-regular : 14px;
+    --font-large : 20px;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: SoDoSans_Light,Helvetica,sans-serif!important;
+}
+
+/* section 1 */
+
+.navbar{
+    display: flex;
+    padding:16px 8%;
+}
+
+.navbar >  ul{
+    list-style: none;
+    display: flex;
+}
+
+.navbar > ul >li{
+    margin: 0 30px;
+}
+
+.styled-input {
+    width: 250px;
+    border-radius: 32px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin: 8px 20%;
+    margin-left: 130%;
+}
+  
+#profile-logo{
+    margin-left: 30%;
+    margin-top: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar > ul {
+        flex-direction: column;
+    }
+
+    .navbar > ul > li {
+        margin: 5px;
+    }
+
+    .styled-input {
+        margin: 8px 10px;
+    }
+}
+
+/* section 2 */
+  
+#know-more{
+    padding: 16px 8%;
+    background-color: #1e3932;
+    color: aliceblue;
+    display: flex;
+    font-size: 20px;
+}
+
+#know-more-button{
+    border-radius: 32px;
+    height: 30px;
+    color: aliceblue;
+    background-color: #1e3932;
+    border-color: aliceblue;
+    margin-top: 8px;
+    margin-left: 60%;
+    outline: none;
+}
+
+
+/* section 3 */
+
+.handcrafted-curations{
+    padding: 8px 8%;
+    font-size: 20px;
+}
+.items{
+    display: flex;
+}
+
+.items > div >img{
+    border-radius: 110px;
+    height: 110px;
+    margin: auto;
+    margin-left: 0;
+}
+
+.items > div{
+    margin: auto;
+}
+
+.items > div > p{
+    font-size: 16px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* section 4    starbucks essentials*/
+
+.swiper{
+    margin: 8px 8%;
+    color: aliceblue;
+    margin-top: 6%;
+}
+
+.starbucks-essentials{
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    height: 200px;
+    grid-template-areas: "image text text text text text button button";
+}
+
+.slide-image{
+    grid-area: image;
+}
+
+.slide-image > img{
+    height: 200px;
+    width: fit-content;
+    padding-left: 16px;
+}
+
+.slide-text{
+    grid-area: text;
+}
+
+.order-now{
+    grid-area: button;
+}
+
+
+.starbucks-essentials-uniqueness{
+    font-size: var(--font-regular) !important;
+}
+
+.starbucks-essentials-name{
+    font-size: var(--font-large) !important;
+}
+
+.starbucks-essentials-desc{
+    font-size: var(--font-regular) !important;
+}
+
+.slide-text >  p.starbucks-essentials-starting-from{
+    font-size: var(--font-small) !important;
+}
+
+.starbucks-essentials-price{
+    font-size: var(--font-regular) !important;
+}
+
+.order-now-button > button{
+    height: 50px;
+    width: 150px;    
+    border-radius: 32px;
+    border-style: none;
+    margin-top: 100px;
+}
+
+.starbucks-essentials-1{
+    background-color: #198754;
+}
+
+.starbucks-essentials-2{
+    background-image: url(/images/starbucks-essential-2-bg.png);
+}
+
+.starbucks-essentials-2 > div > button,
+.starbucks-essentials-4 > div > button{
+    background-color: #198754;
+    color: aliceblue;
+}
+
+.starbucks-essentials-3{
+    background-image: url(/images/starbucks-essential-3-bg.png);
+}
+
+.starbucks-essentials-4{
+    background-image: url(/images/starbucks-essential-4-bg.png);
+}
+
+.swiper-navBtn {
+    color: #198754;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background: #fff;
+    border-radius: 50%;
+  }
+
+  .swiper-navBtn::before,
+  .swiper-navBtn::after {
+    font-size: 18px;
+    color: #198754;
+  }
+
+  @media screen and (max-width: 768px) {
+    .swiper-navBtn {
+      display: none;
+    }
+  }
+
+
+/* section 5  latest offerings*/
+
+.latest-offerings{
+    margin: 4% 8%;
+}
+
+#latest-offerings-header{
+    font-size: 20px;
+}
+
+.latest-offerings-slide-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.latest-offerings-card-container{
+    margin-top: 4%;
+    border-radius: 8px;
+    border: 1px #ccc;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.latest-offerings-card-image > img{
+    height: 167px;
+    object-fit: cover;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.latest-offerings-display-head, 
+.latest-offerings-display-footer{
+    display: flex;
+}
+
+.swiper-button-next-latest-offerings,
+.swiper-button-prev-latest-offerings {
+    color: #198754;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background: #000000;
+    border-radius: 50%;
+    z-index: 55;
+  }
+
+  .swiper-navBtn-latest-offerings::before,
+  .swiper-navBtn-latest-offerings::after {
+    font-size: 18px;
+    color: #198754;
+  }
+
+  @media screen and (max-width: 768px) {
+    .swiper-navBtn-latest-offerings {
+      display: none;
+    }
+  }
+
+
+
+      /* section 6 */
+
+.barista-recommends{
+    padding: 8px 8%;
+    background-color: #edebe9;
+}
+
+#barista-recommends-head{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "header header  viewMore";
+}
+
+#barista-recommends-header{
+    grid-area: header;
+    font-size: 24px;
+}
+
+#barista-recommends-text{
+    grid-area: viewMore;
+    padding-top: 8px ;
+    text-align: end;
+    color: lightgreen;
+    right: 20px;
+}
+
+.food-cards{
+    background-color: white;
+    border-radius: 16px;
+    margin-right: 20px;
+}
+
+.food-cards-container{
+    padding: 1em 1.5em;
+    overflow: hidden;
+}
+
+div.food-cards-img > img{
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.food-cards-sec1,
+.food-cards-sec2{
+    display: flex;
+}
+
+.food-cards-sec1{
+width: fit-content;}
+
+.swiper-navBtn-barista-recommends {
+    color: #198754;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background: #fff;
+    border-radius: 50%;
+  }
+
+  .swiper-navBtn-barista-recommends::before,
+  .swiper-navBtn-barista-recommends::after {
+    font-size: 18px;
+    color: #198754;
+  }
+
+
+/* section learn more */
+
+.learn-more{
+    margin-top: 4%;
+    padding: 8px 8%;
+    background-color: #edebe9;
+}
+
+.learn-more-img{
+    border-radius: 8px;
+    min-width: 100%;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+}
+
+.learn-more-main{
+    position: relative;
+}
+
+.learn-more-img-text{
+    position: absolute;
+
+}
+
+.top-left{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    color: green;
+    background-color: #fff;
+    font-size: small;
+    border-radius: 4px;
+  }
+
+.top-left > p{
+    margin: 0;
+}
+
+.learn-more-img-text{
+    min-width: 97%;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: aliceblue;
+    background: linear-gradient(359.89deg,rgba(0,0,0,.74) 19.45%,rgba(20, 20, 20, 0.278) 55.07%,rgba(0,0,0,0) 73.63%)!important;    
+}
+
+#learn-more-title{
+    font-size: 32px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#learn-more-description{
+    font-size: 16px;
+    margin-bottom: 3%;
+}
+
+.learn-more-img-text > button{
+    border-radius: 32px;
+    padding: 10px 5%;
+    margin-bottom: 2%;
+}
+
+
+/*  section footer */
+.footer{
+    margin-top: 4%;
+    padding: 8px 8%;
+    background-color: #0e382c;
+    color: aliceblue;
+}
+
+.footer-container{
+    padding: 64px 32px 32px 32px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.footer-container > div > p{
+    font-size: 24px;
+}
+
+.footer-container > div > ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-container > div > ul >li{
+    padding: 10px 0;
+}
+
+.footer-bottom-content{
+    font-size: small;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.footer-copyright{
+text-align: right;
+}
+
+#starbucks-logo,
+.install-logo{
+    padding-top: 8%;
+}
